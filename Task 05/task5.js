@@ -1,9 +1,23 @@
-let number = 2000
-let reminder = (number % 2)
+var readline = require('readline').createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
 
-if (reminder == 0 ){
-console.log('Even number')
-}
-else { 
-    console.log('Odd number')
-}
+
+
+readline.question("Please enter a number: ", function (number){
+   
+    if(number % 2 == 0) {
+        console.log("Even number");
+    }
+    
+ 
+    else if (number % 2 == 1) {
+        console.log("Odd number");
+    }
+
+    else {
+            console.log("Please try again");
+        }
+        readline.close();
+});
